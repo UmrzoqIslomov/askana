@@ -89,22 +89,22 @@ WSGI_APPLICATION = 'src.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.' + os.getenv('DB_ENGINE', "postgresql_psycopg2"),
-        'NAME': os.getenv('DB_NAME', "d169se6kha0lto"),
-        'USER': os.getenv('DB_USER', "ocwqsxcmbjdgil"),
-        'PASSWORD': os.getenv('PASS', "85d5a1b7d282c85683d806f8a55c19a66b129215b411c0db042e50bbdd66528f"),
-        'HOST': os.getenv('DB_HOST', "ec2-52-23-131-232.compute-1.amazonaws.com"),
-        'PORT': os.getenv('DB_HOST', "5432"),
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.' + os.getenv('DB_ENGINE', "postgresql_psycopg2"),
+#         'NAME': os.getenv('DB_NAME', "d169se6kha0lto"),
+#         'USER': os.getenv('DB_USER', "ocwqsxcmbjdgil"),
+#         'PASSWORD': os.getenv('PASS', "85d5a1b7d282c85683d806f8a55c19a66b129215b411c0db042e50bbdd66528f"),
+#         'HOST': os.getenv('DB_HOST', "ec2-52-23-131-232.compute-1.amazonaws.com"),
+#         'PORT': os.getenv('DB_HOST', "5432"),
+#     }
+# }
 
 # db_from_env = dj_database_url.config(conn_max_age=600)
 #
